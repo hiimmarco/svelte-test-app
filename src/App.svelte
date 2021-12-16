@@ -1,11 +1,15 @@
 <script>
-	export let name;
-	export let weather;
+import FeedbackList from './components/FeedbackList.svelte'
+let feedback = [
+	{id: 1, rating: 2, text:'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet'},
+	{id: 2, rating: 5, text:'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet'},
+	{id: 3, rating: 7, text:'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet'},
+	{id: 4, rating: 9, text:'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet'}];
+
 </script>
 
 <main>
-	<h1>Hello {weather}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<FeedbackList feedback={feedback}/>
 </main>
 
 <style>
